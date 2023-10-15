@@ -20,6 +20,7 @@ import { toggleTheme } from "./Redux/Reducers/Theme";
 
 function App() {
   const [load, setLoad] = useState(false);
+  const [state, setState] = useState("");
   const dispatch = useDispatch();
   const [scroll, setScroll] = useState(0);
   const themeStore = localStorage.getItem("theme");
@@ -34,6 +35,9 @@ function App() {
       document.documentElement.classList.add("dark");
     }
   }, []);
+  const setValue = (value) => {
+    setState(value);
+  };
   if (load === false) return <Loading />;
   window.onscroll = function () {
     setScroll(window.scrollY);
@@ -45,18 +49,24 @@ function App() {
       }`}
     >
       <BrowserRouter>
-        <NavBar />
+        {state === true ? <NavBar /> : ""}
         <Routes>
           <Route path="/:name" element={<SearchItems />} />
-          <Route path="/" element={<ProtectedRoute />} />
-          <Route path="/Register" element={<Register />} />
-          <Route path="/Home" element={<HomePage />} />
+          <Route path="/" element={<ProtectedRoute setValue={setValue} />} />
+          <Route path="/Register" element={<Register setValue={setValue} />} />
+          <Route path="/Home" element={<HomePage setValue={setValue} />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/watchList" element={<WatchList />} />
-          <Route path="/categories" element={<Categories />} />
+          <Route path="/cart" element={<Cart setValue={setValue} />} />
+          <Route
+            path="/watchList"
+            element={<WatchList setValue={setValue} />}
+          />
+          <Route
+            path="/categories"
+            element={<Categories setValue={setValue} />}
+          />
           <Route path="/categories/add-new" element={<AddNew />} />
-          <Route path="/books" element={<Books />} />
+          <Route path="/books" element={<Books setValue={setValue} />} />
           <Route path="/books/:id" element={<DynamicBook />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

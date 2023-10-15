@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 import { API } from "../helper";
 import { useEffect } from "react";
 
-export default function Register({ setState }) {
+export default function Register({ setValue }) {
   useEffect(() => {
-    setState(false);
+    setValue(false);
   }, []);
   const navigate = useNavigate();
   async function sendDataToApi(values) {

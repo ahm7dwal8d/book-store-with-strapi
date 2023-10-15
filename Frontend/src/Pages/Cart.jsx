@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useEffect, useLayoutEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCartItems } from "../Redux/Reducers/getCartData";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,7 +7,10 @@ import { Link } from "react-router-dom";
 import { API } from "../helper";
 import { motion } from "framer-motion";
 
-export default function Cart() {
+export default function Cart({ setValue }) {
+  useEffect(() => {
+    setValue(true);
+  }, []);
   const deleteItem = async (id) => {
     const res = await fetch(`${API}cards/${id}`, {
       method: "DELETE",

@@ -9,9 +9,12 @@ import { useEffect } from "react";
 import { login } from "../Redux/Reducers/Auth";
 import { useDispatch } from "react-redux";
 
-export default function Login() {
+export default function Login({ setValue }) {
   const dispatch = useDispatch();
   const nagicate = useNavigate();
+  useEffect(() => {
+    setValue(false);
+  }, []);
   async function getDataFromApi(values) {
     const { email, password } = values;
     try {

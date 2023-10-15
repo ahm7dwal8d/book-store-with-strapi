@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getWatchList } from "../Redux/Reducers/getWathList";
 import { Link } from "react-router-dom";
@@ -9,7 +9,7 @@ import { API, BEARER, GET_TOKEN } from "../helper";
 
 const token = GET_TOKEN();
 
-export default function WatchList() {
+export default function WatchList({ setValue }) {
   const deleteItem = async (id) => {
     const res = await fetch(`${API}wachlists/${id}`, {
       method: "DELETE",
@@ -22,6 +22,9 @@ export default function WatchList() {
     window.location.reload();
     return data;
   };
+  useEffect(() => {
+    setValue(true);
+  }, []);
   const dispatch = useDispatch();
   useLayoutEffect(() => {
     dispatch(getWatchList());

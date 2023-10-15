@@ -1,11 +1,14 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getCategories } from "../Redux/Reducers/getCategories";
 import { motion } from "framer-motion";
 import { IMG_PATH_URL } from "../helper";
 
-export default function Categories() {
+export default function Categories({ setValue }) {
   const dispatch = useDispatch();
+  useEffect(() => {
+    setValue(true);
+  }, []);
   useLayoutEffect(() => {
     dispatch(getCategories());
   }, []);
