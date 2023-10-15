@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "auths",
+  "info": {
+    "singularName": "auth",
+    "pluralName": "auths",
+    "displayName": "Auth"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "auth_email": {
+      "type": "email",
+      "required": true
+    },
+    "auth_password": {
+      "type": "password",
+      "required": true
+    }
+  }
+}

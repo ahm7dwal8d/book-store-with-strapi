@@ -1,0 +1,20 @@
+.header .icon {
+  display: none;
+}
+.links {
+  display: flex;
+}
+@media (max-width: 991px) {
+  .header .links,
+  .links {
+    display: none;
+  }
+  .header .icon {
+    display: flex;
+  }
+}
+@media (max-width: 570px) {
+  .header input {
+    width: 88%;
+  }
+}

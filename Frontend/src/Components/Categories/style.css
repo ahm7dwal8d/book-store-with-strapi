@@ -1,0 +1,3 @@
+.head h3::after {
+  content: "";
+}

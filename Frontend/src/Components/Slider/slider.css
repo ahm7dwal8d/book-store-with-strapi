@@ -1,0 +1,53 @@
+.slide-1 {
+  background-image: url(../../assets/Slider/slider-1.jpg);
+  background-size: cover;
+}
+.slide-2 {
+  background-image: url(../../assets/Slider/slider-2.jpg);
+  background-size: cover;
+}
+.slide-3 {
+  background-image: url(../../assets/Slider/slider-3.jpg);
+  background-size: cover;
+}
+.slide-4 {
+  background-image: url(../../assets/Slider/slider-4.jpg);
+  background-size: cover;
+}
+.slide-5 {
+  background-image: url(../../assets/Slider/slider-5.jpg);
+  background-size: cover;
+}
+.slide-6 {
+  background-image: url(../../assets/Slider/slider-6.jpg);
+  background-size: cover;
+}
+.slide-7 {
+  background-image: url(../../assets/Slider/slider-7.jpg);
+  background-size: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0.5;
+  color: #fff;
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  opacity: 1;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+
+.slider .swiper-pagination span {
+  width: 20px;
+  height: 20px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}

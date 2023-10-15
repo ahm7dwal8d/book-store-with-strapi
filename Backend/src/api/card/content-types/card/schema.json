@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cards",
+  "info": {
+    "singularName": "card",
+    "pluralName": "cards",
+    "displayName": "cart",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "book_title": {
+      "type": "string",
+      "required": true
+    },
+    "book_cate": {
+      "type": "string",
+      "required": true
+    },
+    "book_price": {
+      "type": "decimal",
+      "required": true
+    },
+    "book_img": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

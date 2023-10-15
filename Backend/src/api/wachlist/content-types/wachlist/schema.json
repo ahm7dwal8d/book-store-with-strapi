@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wachlists",
+  "info": {
+    "singularName": "wachlist",
+    "pluralName": "wachlists",
+    "displayName": "watchlist",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "book_title": {
+      "type": "string",
+      "required": true
+    },
+    "book_cate": {
+      "type": "string",
+      "required": true
+    },
+    "book_img": {
+      "type": "string",
+      "required": true
+    },
+    "book_price": {
+      "type": "decimal"
+    }
+  }
+}

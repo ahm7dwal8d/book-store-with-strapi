@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "books",
+  "info": {
+    "singularName": "book",
+    "pluralName": "books",
+    "displayName": "book",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "book_title": {
+      "type": "text",
+      "required": true
+    },
+    "book_img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    },
+    "book_actor": {
+      "type": "string",
+      "required": true
+    },
+    "book_desc": {
+      "type": "text",
+      "required": true
+    },
+    "book_price": {
+      "type": "decimal",
+      "required": true,
+      "default": 0
+    },
+    "book_discount": {
+      "type": "decimal"
+    },
+    "book_print": {
+      "type": "date",
+      "required": true
+    },
+    "book_cate": {
+      "type": "enumeration",
+      "enum": [
+        "fiction",
+        "Non-fiction",
+        "Romance",
+        "Mystery",
+        "Thriller",
+        "Fantasy",
+        "Horror",
+        "Biography",
+        "Autobiography",
+        "Business"
+      ],
+      "required": true
+    },
+    "book_imgs": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}
